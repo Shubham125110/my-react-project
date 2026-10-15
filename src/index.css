@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #e8edf5;
+  --color-muted: #bdc8d7;
+  --color-line: #526275;
+  --color-paper: #f3f6fa;
+  --color-leaf: #304456;
+  --color-surface: #1d2b3a;
+  --color-surface-hover: #293b4e;
+  --color-coral: #8ab4ff;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-heading: 'Plus Jakarta Sans', sans-serif;
+  --animate-fade-in: fade-in 600ms ease both;
+  --animate-rise-in: rise-in 600ms ease both;
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes rise-in {
+    from { opacity: 0; transform: translateY(13px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+
+@layer base {
+  html {
+    @apply min-w-[280px] scroll-smooth;
+  }
+
+  body {
+    @apply m-0 min-h-screen font-sans text-paper antialiased;
+    background-color: #030709;
+    background-image:
+      radial-gradient(ellipse 100% 44% at 50% 42%, rgba(154, 160, 164, 0.8), transparent 100%),
+      linear-gradient(180deg, #063d5b 0%, #06445e 27%, #24434d 48%, #10252b 70%, #030709 100%);
+    background-attachment: fixed;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    font-optical-sizing: auto;
+  }
+
+  a,
+  button {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    @apply outline-2 outline-coral outline-offset-[3px];
+  }
+
+  #root {
+    @apply min-h-screen;
+  }
+}
