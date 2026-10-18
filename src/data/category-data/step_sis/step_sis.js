@@ -17,7 +17,7 @@ import fifteenThumbnail from './thumbnails/fifteen.jpg'
 
 
 export default {
-  "slug": "wer",
+  "slug": "Step sister",
   "name": "Step sister",
   links: [
     {

@@ -18,7 +18,7 @@ import fifteenThumbnail from './thumbnails/fifteen.jpg';
 
 
 export default {
-  slug: 'asdf',
+  slug: 'Three Some',
   name: 'Three Some',
   links: [
     {

@@ -1,11 +1,14 @@
-function Navbar({ activeSection, isCategoryPage }) {
+function Navbar({ activeSection, isCategoryPage, isContactPage }) {
   const links = [
     { label: 'Discover', section: 'discover', homeHref: '#discover' },
     { label: 'Categories', section: 'categories', homeHref: '#categories' },
-    { label: 'About', section: 'about', homeHref: '#about' },
+    { label: 'Contact us', section: 'contact', homeHref: '#contact' },
   ]
-  const linkHref = (homeHref) => isCategoryPage ? `/${homeHref}` : homeHref
-  const actionHref = isCategoryPage ? '/' : '#categories'
+  const linkHref = (section, homeHref) => {
+    if (section === 'contact') return '/contact'
+    return isCategoryPage || isContactPage ? `/${homeHref}` : homeHref
+  }
+  const actionHref = isCategoryPage || isContactPage ? '/#categories' : '#categories'
 
   return (
     <header className="flex min-h-[82px] animate-fade-in items-center justify-between rounded-b-2xl bg-[#111827] px-6 text-paper shadow-[0_8px_24px_rgba(17,24,39,0.12)] max-[620px]:min-h-[68px] max-[620px]:px-3">
@@ -19,7 +22,7 @@ function Navbar({ activeSection, isCategoryPage }) {
           return (
             <a
               className={`relative text-[13px] font-medium no-underline max-[620px]:text-[11px] ${isActive ? 'text-[#8ab4ff] after:absolute after:-bottom-[12px] after:left-0 after:right-0 after:h-[3px] after:rounded-full after:bg-[#8ab4ff]' : 'text-paper/75 transition-colors duration-150 hover:text-[#8ab4ff]'} ${section !== 'discover' ? 'max-[620px]:hidden' : ''}`}
-              href={linkHref(homeHref)}
+              href={linkHref(section, homeHref)}
               key={section}
             >
               {label}

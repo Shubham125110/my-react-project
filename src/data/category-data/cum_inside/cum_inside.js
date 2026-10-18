@@ -15,7 +15,7 @@ import fourteenThumbnail from './thumbnails/fourteen.jpg';
 import fifteenThumbnail from './thumbnails/fifteen.jpg';
 
 export default {
-  slug: 'xyz',
+  slug: 'Cum inside',
   name: 'Cum inside',
   links: [
     {

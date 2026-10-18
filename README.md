@@ -1,5 +1,9 @@
 # React + Vite
 
+## Contact form
+
+The contact form submits the sender's name, email, and message through FormSubmit to `shubham125110@gmail.com`. On first use, FormSubmit sends a confirmation email to that address; confirm it to activate delivery. The recipient is configured as the form action in `src/pages/ContactPage.jsx`.
+
 This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
 Currently, two official plugins are available:
